@@ -5,16 +5,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Student Registration Form</title>
 
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles.css" />
   </head>
   <body style="border-color: #d5d5d9">
-    <form style="border-color: #e6e6e6; margin: 200px; border-radius: 16px">
+    <form
+      style="
+        border-color: #e6e6e6;
+        margin: 200px;
+        border-radius: 16px;
+        display: flex;
+        justify-content: space-around;
+      "
+    >
       <seciton>
         <h1>ព៍ត័មានផ្ទាល់ខ្លួន</h1>
 
         <label for="name">គោត្ដនាម​ និងនាម</label>
         <br />
         <input
+          style="margin-bottom: 20px; width: 434px"
           placeholder="ឯក ឧត្ដម"
           type="text"
           name="name"
@@ -27,15 +36,393 @@
         <label for="name">គោត្ដនាម​ និងនាម (ភាសាអង់គ្លេស)</label>
         <br />
         <input
+          style="margin-bottom: 20px; width: 434px"
           placeholder="Aek Oudom"
           type="text"
-          name="name"
-          id="name"
+          name="eng-name"
+          id="eng-name"
           required
         />
+
+        <br />
+
+        <label for="gender">ភេទ</label>
+        <br />
+        <select name="gender" id="gender" required style="margin-bottom: 20px">
+          <option value="" selected disabled>ភេទ</option>
+          <option value="male">ប្រុស</option>
+          <option value="female">ស្រី</option>
+        </select>
+
+        <br />
+
+        <label for="dateOfBirth">ថ្ងៃខែឆ្នាំកំណើត</label>
+        <br />
+        <input
+          style="width: 140px"
+          type="number"
+          name="birthDay"
+          id="birthDay"
+          placeholder="ថ្ងៃទី"
+        />
+
+        <select name="birthMonth" id="birthMonth">
+          <option value="month" disabled selected>ខែ</option>
+          <option value="jan">មករា</option>
+          <option value="feb">កុម្ភ:</option>
+          <option value="mar">មីនា</option>
+          <option value="apr">មេសា</option>
+          <option value="may">ឧសភា</option>
+          <option value="jun">មិថុនា</option>
+          <option value="jul">កក្កដា</option>
+          <option value="aug">សីហា</option>
+          <option value="sep">កញ្ញា</option>
+          <option value="oct">តុលា</option>
+          <option value="nov">វិច្ឆិកា</option>
+          <option value="dec">ធ្នូ</option>
+        </select>
+
+        <input
+          style="margin-bottom: 20px; width: 140px"
+          type="number"
+          name="birthYear"
+          id="birthYear"
+          placeholder="ឆ្នាំ"
+        />
+
+        <br />
+
+        <label for="placeOfBirth">ទីកន្លែងកំណើត</label>
+        <br />
+        <select
+          style="margin-bottom: 20px"
+          name="placeOfBirth"
+          id="placeOfBirth"
+        >
+          <option value="" selected disabled>សូមជ្រើសរើសខេត្ត/ក្រុង</option>
+          <option value="ភ្នំពេញ">រាជធានី ភ្នំពេញ</option>
+          <option value="បន្ទាយមានជ័យ">ខេត្ត បន្ទាយមានជ័យ</option>
+          <option value="បាត់ដំបង">ខេត្ត បាត់ដំបង</option>
+          <option value="កំពង់ចាម">ខេត្ត កំពង់ចាម</option>
+          <option value="កំពង់ឆ្នាំង">ខេត្ត កំពង់ឆ្នាំង</option>
+          <option value="កំពង់ស្ពឺ">ខេត្ត កំពង់ស្ពឺ</option>
+          <option value="កំពង់ធំ">ខេត្ត កំពង់ធំ</option>
+          <option value="កំពត">ខេត្ត កំពត</option>
+          <option value="កណ្ដាល">ខេត្ត កណ្ដាល</option>
+          <option value="កោះកុង">ខេត្ត កោះកុង</option>
+          <option value="ក្រចេះ">ខេត្ត ក្រចេះ</option>
+          <option value="មណ្ឌលគិរី">ខេត្ត មណ្ឌលគិរី</option>
+          <option value="ឧត្តរមានជ័យ">ខេត្ត ឧត្តរមានជ័យ</option>
+          <option value="ប៉ៃលិន">ខេត្ត ប៉ៃលិន</option>
+          <option value="ព្រះសីហនុ">ខេត្ត ព្រះសីហនុ</option>
+          <option value="ព្រះវិហារ">ខេត្ត ព្រះវិហារ</option>
+          <option value="ព្រៃវែង">ខេត្ត ព្រៃវែង</option>
+          <option value="ពោធិ៍សាត់">ខេត្ត ពោធិ៍សាត់</option>
+          <option value="រតនគិរី">ខេត្ត រតនគិរី</option>
+          <option value="សៀមរាប">ខេត្ត សៀមរាប</option>
+          <option value="ស្ទឹងត្រែង">ខេត្ត ស្ទឹងត្រែង</option>
+          <option value="ស្វាយរៀង">ខេត្ត ស្វាយរៀង</option>
+          <option value="តាកែវ">ខេត្ត តាកែវ</option>
+          <option value="ត្បូងឃ្មុំ">ខេត្ត ត្បូងឃ្មុំ</option>
+          <option value="កែប">ខេត្ត កែប</option>
+        </select>
+
+        <br />
+
+        <label for="tel">លេខទូរស័ព្ទ ទំនាក់ទំនង (Telegram)</label>
+        <br />
+        <input
+          style="margin-bottom: 20px; width: 434px"
+          type="tel"
+          name="telephone"
+          id="telephone"
+          placeholder="012345678"
+          required
+        />
+
+        <br />
+
+        <label for="shift">វេនសិក្សា</label>
+        <br />
+        <select name="shift" id="shift" required>
+          <option value="" selected disabled>សូមជ្រើសរើសវេនសិក្សា</option>
+          <option value="morning">ព្រឹក</option>
+          <option value="afternoon">រសៀល</option>
+          <option value="evening">ល្ងាច</option>
+        </select>
       </seciton>
 
-      <seciton></seciton>
+      <div style="border-left: 2px solid #d6d6d6; height: 1000px"></div>
+
+      <seciton>
+        <h1>ព៍ត័មានបន្ថែម</h1>
+
+        <!-- father info -->
+        <div style="display: flex; gap: 20px; margin-bottom: 20px">
+          <div>
+            <label for="fatherName">ឈ្មោះឪពុក</label>
+            <br />
+            <input
+              class="small-input"
+              placeholder="ចន​ សុីណា"
+              type="text"
+              name="fatherName"
+              id="fatherName"
+            />
+          </div>
+
+          <div>
+            <label for="fatherTel">លេខទូរស័ព្ទឪពុក (បើមាន)</label>
+            <br />
+            <input
+              class="small-input"
+              type="tel"
+              name="fatherTelephone"
+              id="fatherTelephone"
+              placeholder="012345678"
+            />
+          </div>
+        </div>
+
+        <!-- mother info -->
+        <div style="display: flex; gap: 20px; margin-bottom: 20px">
+          <div>
+            <label for="fatherName">ឈ្មោះម្ដាយ</label>
+            <br />
+            <input
+              class="small-input"
+              placeholder="ថេល័​ ស្វីស"
+              type="text"
+              name="motherName"
+              id="motherName"
+            />
+          </div>
+
+          <div>
+            <label for="motherTel">លេខទូរស័ព្ទម្ដាយ (បើមាន)</label>
+            <br />
+            <input
+              class="small-input"
+              type="tel"
+              name="motherTelephone"
+              id="motherTelephone"
+              placeholder="012345678"
+            />
+          </div>
+        </div>
+
+        <div style="display: flex; gap: 20px">
+          <div>
+            <label for="schoolName">ឈ្មោះសាលារបស់ខ្លួន</label>
+            <br />
+            <input
+              class="small-input"
+              type="text"
+              name="schoolName"
+              id="schoolName"
+              placeholder="វិទ្យាល័យឥន្ត្រទេវី"
+            />
+          </div>
+          <div>
+            <label for="schoolLocation">មកពីខេត្ត/ក្រុង</label>
+            <br />
+            <select name="schoolLocation" id="schoolLocation">
+              <option value="" selected disabled>សូមជ្រើសរើសខេត្ត/ក្រុង</option>
+              <option value="ភ្នំពេញ">រាជធានី ភ្នំពេញ</option>
+              <option value="បន្ទាយមានជ័យ">ខេត្ត បន្ទាយមានជ័យ</option>
+              <option value="បាត់ដំបង">ខេត្ត បាត់ដំបង</option>
+              <option value="កំពង់ចាម">ខេត្ត កំពង់ចាម</option>
+              <option value="កំពង់ឆ្នាំង">ខេត្ត កំពង់ឆ្នាំង</option>
+              <option value="កំពង់ស្ពឺ">ខេត្ត កំពង់ស្ពឺ</option>
+              <option value="កំពង់ធំ">ខេត្ត កំពង់ធំ</option>
+              <option value="កំពត">ខេត្ត កំពត</option>
+              <option value="កណ្ដាល">ខេត្ត កណ្ដាល</option>
+              <option value="កោះកុង">ខេត្ត កោះកុង</option>
+              <option value="ក្រចេះ">ខេត្ត ក្រចេះ</option>
+              <option value="មណ្ឌលគិរី">ខេត្ត មណ្ឌលគិរី</option>
+              <option value="ឧត្តរមានជ័យ">ខេត្ត ឧត្តរមានជ័យ</option>
+              <option value="ប៉ៃលិន">ខេត្ត ប៉ៃលិន</option>
+              <option value="ព្រះសីហនុ">ខេត្ត ព្រះសីហនុ</option>
+              <option value="ព្រះវិហារ">ខេត្ត ព្រះវិហារ</option>
+              <option value="ព្រៃវែង">ខេត្ត ព្រៃវែង</option>
+              <option value="ពោធិ៍សាត់">ខេត្ត ពោធិ៍សាត់</option>
+              <option value="រតនគិរី">ខេត្ត រតនគិរី</option>
+              <option value="សៀមរាប">ខេត្ត សៀមរាប</option>
+              <option value="ស្ទឹងត្រែង">ខេត្ត ស្ទឹងត្រែង</option>
+              <option value="ស្វាយរៀង">ខេត្ត ស្វាយរៀង</option>
+              <option value="តាកែវ">ខេត្ត តាកែវ</option>
+              <option value="ត្បូងឃ្មុំ">ខេត្ត ត្បូងឃ្មុំ</option>
+              <option value="កែប">ខេត្ត កែប</option>
+            </select>
+          </div>
+        </div>
+
+        <br />
+
+        <label for="grade">ទទួលបាននិទ្ទេសរួម (បើមាន)</label>
+        <br />
+        <select style="margin-bottom: 20px" name="grade" id="grade">
+          <option value="">ជ្រើសរើសនិទ្ទេស</option>
+          <option value="a">A</option>
+          <option value="b">B</option>
+          <option value="c">C</option>
+          <option value="d">D</option>
+          <option value="e">E</option>
+          <option value="f">F</option>
+        </select>
+
+        <br />
+        <label for="currentWhereabouts">អាសយដ្ឋានបច្ចុប្បន្ន</label>
+        <br />
+        <select
+          style="margin-bottom: 20px"
+          name="currentWhereabouts"
+          id="currentWhereabouts"
+        >
+          <option value="" selected disabled>សូមជ្រើសរើសខេត្ត/ក្រុង</option>
+          <option value="ភ្នំពេញ">រាជធានី ភ្នំពេញ</option>
+          <option value="បន្ទាយមានជ័យ">ខេត្ត បន្ទាយមានជ័យ</option>
+          <option value="បាត់ដំបង">ខេត្ត បាត់ដំបង</option>
+          <option value="កំពង់ចាម">ខេត្ត កំពង់ចាម</option>
+          <option value="កំពង់ឆ្នាំង">ខេត្ត កំពង់ឆ្នាំង</option>
+          <option value="កំពង់ស្ពឺ">ខេត្ត កំពង់ស្ពឺ</option>
+          <option value="កំពង់ធំ">ខេត្ត កំពង់ធំ</option>
+          <option value="កំពត">ខេត្ត កំពត</option>
+          <option value="កណ្ដាល">ខេត្ត កណ្ដាល</option>
+          <option value="កោះកុង">ខេត្ត កោះកុង</option>
+          <option value="ក្រចេះ">ខេត្ត ក្រចេះ</option>
+          <option value="មណ្ឌលគិរី">ខេត្ត មណ្ឌលគិរី</option>
+          <option value="ឧត្តរមានជ័យ">ខេត្ត ឧត្តរមានជ័យ</option>
+          <option value="ប៉ៃលិន">ខេត្ត ប៉ៃលិន</option>
+          <option value="ព្រះសីហនុ">ខេត្ត ព្រះសីហនុ</option>
+          <option value="ព្រះវិហារ">ខេត្ត ព្រះវិហារ</option>
+          <option value="ព្រៃវែង">ខេត្ត ព្រៃវែង</option>
+          <option value="ពោធិ៍សាត់">ខេត្ត ពោធិ៍សាត់</option>
+          <option value="រតនគិរី">ខេត្ត រតនគិរី</option>
+          <option value="សៀមរាប">ខេត្ត សៀមរាប</option>
+          <option value="ស្ទឹងត្រែង">ខេត្ត ស្ទឹងត្រែង</option>
+          <option value="ស្វាយរៀង">ខេត្ត ស្វាយរៀង</option>
+          <option value="តាកែវ">ខេត្ត តាកែវ</option>
+          <option value="ត្បូងឃ្មុំ">ខេត្ត ត្បូងឃ្មុំ</option>
+          <option value="កែប">ខេត្ត កែប</option>
+        </select>
+
+        <br />
+        <label for="aboutInstituteInfo">ស្គាល់ ISTAD តាមរយ៖</label>
+        <br />
+        <input
+          style="margin-bottom: 20px; width: 434px"
+          type="text"
+          name="aboutInstituteInfo"
+          id="aboutInstituteInfo"
+          placeholder="សូមបញ្ជាក់ពិរបៀបដែលអ្នកបានស្គាល់
+          ISTAD"
+        />
+
+        <br />
+
+        <div style="display: flex; gap: 20px; margin-bottom: 20px">
+          <div>
+            <label for="referal">អ្នកណែនាំចុះឈ្មោះរៀន (បើមាន)</label>
+            <br />
+            <input
+              class="small-input"
+              type="text"
+              name="referal"
+              id="referal"
+              placeholder="គ្រូ ឬមិត្តភក្តិ​ ផ្សេងៗ"
+            />
+          </div>
+
+          <div>
+            <label for="relation">ត្រូវជា (បើមាន)</label>
+            <br />
+            <input
+              class="small-input"
+              type="text"
+              name="relation"
+              id="relation"
+              placeholder="ពូ ឬមិត្តភក្តិ​ ផ្សេងៗ"
+            />
+          </div>
+        </div>
+
+        <div>
+          <label for="photo">រូបថត​ (បើមាន)</label>
+          <div style="display: flex; gap: 20px; text-align: center">
+            <div>
+              <label
+                for="file-input"
+                style="
+                  display: flex;
+                  flex-direction: column;
+                  text-align: center;
+                  border: dashed 1px;
+                  border-radius: 4px;
+                  font-size: smaller;
+                  padding: 20px;
+                "
+              >
+                <div>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 640 640"
+                    width="64"
+                  >
+                    <path
+                      fill="rgb(0, 76, 255)"
+                      d="M342.6 73.4C330.1 60.9 309.8 60.9 297.3 73.4L169.3 201.4C156.8 213.9 156.8 234.2 169.3 246.7C181.8 259.2 202.1 259.2 214.6 246.7L288 173.3L288 384C288 401.7 302.3 416 320 416C337.7 416 352 401.7 352 384L352 173.3L425.4 246.7C437.9 259.2 458.2 259.2 470.7 246.7C483.2 234.2 483.2 213.9 470.7 201.4L342.7 73.4zM160 416C160 398.3 145.7 384 128 384C110.3 384 96 398.3 96 416L96 480C96 533 139 576 192 576L448 576C501 576 544 533 544 480L544 416C544 398.3 529.7 384 512 384C494.3 384 480 398.3 480 416L480 480C480 497.7 465.7 512 448 512L192 512C174.3 512 160 497.7 160 480L160 416z"
+                    />
+                  </svg>
+                </div>
+                <span>រូបថត</span>
+                <span>សូមបង្ហោះរូបថតដែលអាចមើលឃើញមុខរបស់អ្នក។</span>
+                <span style="color: #aeaaa9"
+                  >ប្រភេទឯកសារ JPG, PNG ឬ PDF, ទំហំឯកសារមិនលើសពី 10MB</span
+                >
+              </label>
+
+              <div hidden>
+                <span>Choose File</span>
+                <input type="file" id="file-input" accept=".jpg,.png,.pdf" />
+              </div>
+            </div>
+
+            <div>
+              គំរូរូបថត
+
+              <div style="background-color: #f0efeb">
+                <svg
+                  width="
+                128"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 640 640"
+                >
+                  <!--!Font Awesome Free v7.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.-->
+                  <path
+                    fill="#3d3d3dff"
+                    d="M320 312C386.3 312 440 258.3 440 192C440 125.7 386.3 72 320 72C253.7 72 200 125.7 200 192C200 258.3 253.7 312 320 312zM290.3 368C191.8 368 112 447.8 112 546.3C112 562.7 125.3 576 141.7 576L498.3 576C514.7 576 528 562.7 528 546.3C528 447.8 448.2 368 349.7 368L290.3 368z"
+                  />
+                </svg>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <button
+          style="
+            margin-left: 450px;
+            margin-top: 20px;
+            border: 0;
+            border-radius: 8px;
+            padding: 6px 12px 6px 12px;
+            color: white;
+            background-color: #253c95;
+          "
+        >
+          ចុះឈ្មោះ
+        </button>
+      </seciton>
     </form>
   </body>
 </html>
